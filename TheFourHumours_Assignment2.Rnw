@@ -89,6 +89,18 @@ gg1 <- (ggplot(philadata, aes(x=date, y = pim)) +
 
 \begin{enumerate}[(a)]
 
+\item
+
+\begin{proof}[Solution]
+
+since $I(t)=\eta M(t-\tau)$, if we take natural log to I, we should get,
+\begin{align*}
+\ln(I(t))=ln(\eta M(t-\tau))\\
+\ln(I(t))=ln(\eta)+ln(M(t-\tau))
+\end{align*}
+Thus, we can see that function $\ln(I(t))$ can be obtained by shifting function $\ln(M(t))$ $\tau$ units to the left, and then shift up by $\ln(\eta)$, thus they have the exact same slope.
+\end{proof}
+
 \item \EstimateRna
 
 \item The graph below shows the Philadelphia 1918 mortality data, where the number of mortalities have been transformed logarithmically. We can see that there is a straight line from the end of September to the beginning of October. With trial and error, we found that the best line comes from choosing the dates to be between September 23rd and October 5th.
@@ -132,6 +144,18 @@ gg3 <- gg2 + geom_abline(intercept = 4517.0819254, slope = 0.2410217, col = "red
 @
   
 \item \EstimateRnc
+
+\item
+
+\begin{proof}[Solution]
+
+In SIR model, $\frac{dI}{dt}=R_0SI-\gamma I$, since the logrithmic behavior occurs at the beginning of the epidemics, we may assume $S\approx1$. Thus, the model can be simplified to $\frac{dI}{dt}=R_0I-\gamma I$. So we can easily solve I(t),
+\begin{equation}
+I(t)=e^{R_0-\gamma}
+\end{equation}
+So from there we can conlude that the slope should be equal to $R_0 -\gamma$.
+Thus, we still need an individual measurement on $\gamma$ to determine $R_0$
+\end{proof}
 
 \end{enumerate}
 
